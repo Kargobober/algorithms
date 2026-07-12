@@ -2,7 +2,7 @@ window.log = console.log;
 
 export function workout(delay) {
   const startTime = performance.now();
-  while (performance.now() - startTime < delay) {}
+  while (performance.now() - startTime <= delay) {}
 }
 
 /**
@@ -13,7 +13,7 @@ export function workout(delay) {
  */
 export const tm = (cb, ...args) => {
   if (!cb) {
-    log("tm - no cb.\n");
+    log('tm - no cb.\n');
     return;
   }
 
@@ -23,5 +23,5 @@ export const tm = (cb, ...args) => {
   const b = performance.now();
   log(res);
   log(`Executing takes ${(b - a).toFixed(4)}ms.`);
-  log("-----------------------------\n");
+  log('-----------------------------\n');
 };
