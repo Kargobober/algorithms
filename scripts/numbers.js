@@ -1,5 +1,5 @@
 /**
- *
+ * Получение суммы чисел.
  * @param {number[]} arr
  * @returns {number}
  *

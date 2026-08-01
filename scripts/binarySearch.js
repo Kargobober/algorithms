@@ -1,11 +1,13 @@
 // @ts-check
-// Бинарный поиск в отсортированном массиве
+// Бинарный поиск в отсортированном массиве.
 
 /**
  *
  * @param {any[]} arr
  * @param {any} search
  * @returns {number} индекс элемента
+ *
+ * @algoComplexity O(log N)
  */
 function binarySearch(arr, search) {
   let l = 0;

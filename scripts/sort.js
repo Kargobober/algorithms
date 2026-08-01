@@ -1,3 +1,9 @@
+/**
+ *
+ * @param {*} arr
+ *
+ * @algoComplexity O(N²)
+ */
 export function bubbleSort(arr) {
   for (let j = arr.length - 1; j > 0; j--) {
     // С каждой итерацией верхняя граница j уменьшается на единицу, поскольку мы знаем,
