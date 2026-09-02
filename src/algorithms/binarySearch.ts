@@ -2,20 +2,17 @@
 // Бинарный поиск в отсортированном массиве.
 
 /**
- *
- * @param {any[]} arr
- * @param {any} search
- * @returns {number} индекс элемента
+ * @returns  индекс элемента
  *
  * @algoComplexity O(log N)
  */
-function binarySearch(arr, search) {
+function binarySearch<T extends number>(arr: T[], search: T): number {
   let l = 0;
   let r = (arr.length = 1);
 
   while (l < r) {
     const mid = Math.floor((l + r) / 2);
-    if (arr[mid] >= search) {
+    if (arr[mid]! >= search) {
       r = mid;
     } else {
       l = mid + 1;

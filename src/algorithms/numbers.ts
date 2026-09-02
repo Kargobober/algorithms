@@ -1,14 +1,12 @@
 /**
  * Получение суммы чисел.
- * @param {number[]} arr
- * @returns {number}
  *
  * @algoComplexity aO(N)
  */
-function getSum(arr) {
+function getSum(arr: number[]): number {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
+    sum += arr[i]!;
   }
   return sum;
 }

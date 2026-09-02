@@ -1,17 +1,11 @@
 window.log = console.log;
 
-export function workout(delay) {
+export function workout(delay: number) {
   const startTime = performance.now();
   while (performance.now() - startTime <= delay) {}
 }
 
-/**
- *
- * @param {(...args: any[]) => void} cb
- * @param  {...any} args
- * @returns {void}
- */
-export const tm = (cb, ...args) => {
+export const tm = (cb: (...args: any[]) => void, ...args: any[]): void => {
   if (!cb) {
     log('tm - no cb.\n');
     return;

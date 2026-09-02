@@ -2,6 +2,7 @@ node_modules/
 
 dist/
 build/
+public/dist/
 
 npm-debug.log*
 

@@ -5,21 +5,15 @@ const str1 = 'Искать такси';
 
 /**
  * Решение в лоб.
- *
- * @param {string} str
- * @returns {boolean}
  */
-function isPalindrom(str) {
+function isPalindrom(str: string): boolean {
   return str === str.split('').reverse().join();
 }
 
 /**
  * Решение через два указателя.
- *
- * @param {string} str
- * @returns {boolean}
  */
-function isPalindrom2(str) {
+function isPalindrom2(str: string): boolean {
   // левый указатель
   let l = 0;
   // правый указатель

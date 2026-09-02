@@ -4,11 +4,15 @@
   "description": "Examples of algorithm implementations.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc:w": "tsc --watch",
+    "server": "live-server ./public --port=4200",
+    "start": "concurrently \"npm run tsc:w\" \"npm run server\""
   },
   "author": "Kargobober",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^10.0.5",
+    "live-server": "^1.2.2",
     "typescript": "^7.0.2"
   }
 }
