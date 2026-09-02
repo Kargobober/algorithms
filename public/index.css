@@ -1,1 +1,5 @@
 @import url(./styles/wallpaper.css);
+
+body {
+  color: white;
+}
