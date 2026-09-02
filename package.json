@@ -1,0 +1,14 @@
+{
+  "name": "algorithms",
+  "version": "0.0.0",
+  "description": "Examples of algorithm implementations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kargobober",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
