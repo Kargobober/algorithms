@@ -68,23 +68,18 @@ function twoSum_v2(nums: number[], target: number): number[] {
  * @leet_code 26
  */
 function removeDuplicates(nums: number[]): number {
-  if (!nums.length || nums.length === 1) {
-    return nums.length;
+  if (!nums.length) {
+    return 0;
   }
 
   let uniqIdx = 0;
-  let currentIdx = 1;
-  let counter = 1;
 
-  while (currentIdx < nums.length) {
+  for (let currentIdx = 1; currentIdx < nums.length; currentIdx++) {
     if (nums[currentIdx] !== nums[uniqIdx]) {
       uniqIdx++;
       nums[uniqIdx] = nums[currentIdx]!;
-      counter++;
     }
-
-    currentIdx++;
   }
 
-  return counter;
+  return uniqIdx + 1;
 }
