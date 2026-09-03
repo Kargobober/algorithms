@@ -12,6 +12,7 @@ function getSum(arr: number[]): number {
 }
 
 // Найти индексы чисел, дающих в сумме target. Решение во входных данных всегда есть и оно одно.
+/** @leet_code 1 */
 function twoSum_v1(nums: number[], target: number): number[] {
   const maper = nums.map((num, idx) => ({ num, idx }));
 
@@ -52,4 +53,38 @@ function twoSum_v2(nums: number[], target: number): number[] {
   }
 
   return [];
+}
+
+/**
+ * Work in place.
+ *
+ * Returns `k` unique numbers.
+ *
+ * Cells in array after `k` is not modified or will be changed to undefined.
+ *
+ * @param nums non-decreasing integers
+ * @returns Length of unique numbers -- `k`.
+ *
+ * @leet_code 26
+ */
+function removeDuplicates(nums: number[]): number {
+  if (!nums.length || nums.length === 1) {
+    return nums.length;
+  }
+
+  let uniqIdx = 0;
+  let currentIdx = 1;
+  let counter = 1;
+
+  while (currentIdx < nums.length) {
+    if (nums[currentIdx] !== nums[uniqIdx]) {
+      uniqIdx++;
+      nums[uniqIdx] = nums[currentIdx]!;
+      counter++;
+    }
+
+    currentIdx++;
+  }
+
+  return counter;
 }
